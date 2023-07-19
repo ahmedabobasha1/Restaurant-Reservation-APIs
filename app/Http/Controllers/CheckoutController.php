@@ -13,8 +13,6 @@ class CheckoutController extends Controller
     {
         $order_data = Order::where('table_id',$table_number)->latest()->first();
         return view('invoke', compact('order_data'));
-        // return response()->json([
-        //     'reservation_data' => ReservationResource::collection($reservation_data), 'order_data' => OrderResource::collection($order_data)
-        // ]);
+       
     }
 }
